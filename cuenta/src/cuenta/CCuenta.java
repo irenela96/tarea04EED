@@ -9,6 +9,34 @@ package cuenta;
 public class CCuenta {
 
     /**
+     * @return the cuenta
+     */
+    public String getCuenta() {
+        return cuenta;
+    }
+
+    /**
+     * @param cuenta the cuenta to set
+     */
+    public void setCuenta(String cuenta) {
+        this.cuenta = cuenta;
+    }
+
+    /**
+     * @return the saldo
+     */
+    public double getSaldo() {
+        return saldo;
+    }
+
+    /**
+     * @param saldo the saldo to set
+     */
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
+    /**
      * ATRIBUTOS DE LA CLASE CCuenta
      */
     private String nombre;
@@ -62,7 +90,7 @@ public class CCuenta {
      */
     public double estado()
     {
-        return saldo;
+        return getSaldo();
     }
 
     /**
@@ -74,7 +102,7 @@ public class CCuenta {
     {   cantidad = 300; 
         if (cantidad<0)
             throw new Exception("No se puede ingresar una cantidad negativa");
-        saldo = saldo + cantidad;
+        setSaldo(getSaldo() + cantidad);
     }
 
     /**
@@ -88,7 +116,7 @@ public class CCuenta {
             throw new Exception ("No se puede retirar una cantidad negativa");
         if (estado()< cantidad)
             throw new Exception ("No se hay suficiente saldo");
-        saldo = saldo - cantidad;
+        setSaldo(getSaldo() - cantidad);
     }
 
     /**
@@ -101,7 +129,7 @@ public class CCuenta {
      */
     public String obtenerCuenta()
     {
-        return cuenta;
+        return getCuenta();
     }
 
     /**
@@ -134,39 +162,6 @@ public class CCuenta {
      */
     public void setTipoInterés(double tipoInterés) {
         this.tipoInterés = tipoInterés;
-    }
-    
-    /**
-     * Método por el que se devuelve el estado de la Cuenta
-     * @return devuelve el estado de la cuenta del usuario
-     */
-    public String getCuenta() {
-        return cuenta;
-    }
-    /**
-     * Método por el que se le asignan valores a la Cuenta
-     * @param cuenta es la cuenta del usuario con todos sus parémetros
-     */
-    public void setCuenta(String cuenta) {
-        this.cuenta = cuenta;
-    }
-
-    /**
-     * Método por el que se devuelve la cantidad de dinero de la cuenta del usuario
-     * @return devuelve la cantidad de dinero de la cuenta del usuario
-     */
-    public double getSaldo() {
-        return saldo;
-    }
-
-    /**
-     * Método por el que se asigna la cantidad de dinero que tiene la cuenta del usuario
-     * @param saldo es la cantidad de dinero de la cuenta del usuario
-     */
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
-    }
-    
-    
+    }    
     
 }
