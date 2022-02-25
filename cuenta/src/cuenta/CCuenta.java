@@ -3,34 +3,38 @@
  * and open the template in the editor.
  */
 
-package cuenta;
+package dam_ed04_actividad;
 
 
 public class CCuenta {
 
     /**
-     * @return the cuenta
+     * Metodo que pide el número de cuenta del usuario
+     * @return cuenta número de cuenta del usuario
      */
     public String getCuenta() {
         return cuenta;
     }
 
     /**
-     * @param cuenta the cuenta to set
+     * Metodo que asigna el número de cuenta del usuario
+     * @param cuenta número de cuenta del usuario
      */
     public void setCuenta(String cuenta) {
         this.cuenta = cuenta;
     }
 
     /**
-     * @return the saldo
+     * Método que devuelve el saldo de la cuenta del cliente
+     * @return saldo la cantidad de dinero que tiene el usuario en su cuenta
      */
     public double getSaldo() {
         return saldo;
     }
 
     /**
-     * @param saldo the saldo to set
+     * Método que asigna el saldo de la cuenta del cliente
+     * @param saldo la cantidad de dinero que tiene el usuario en su cuenta
      */
     public void setSaldo(double saldo) {
         this.saldo = saldo;
@@ -56,7 +60,7 @@ public class CCuenta {
     /**
      * Constructor con parámetros
      * @param nom nombre del usuario de la cuenta
-     * @param cue numero de la cuenta del usuario
+     * @param cue número de la cuenta del usuario
      * @param sal cantidad de dinero que hay en la cuenta
      * @param tipo tipo de interés de la cuenta
      */
@@ -120,12 +124,8 @@ public class CCuenta {
     }
 
     /**
-     * Método para obtener los datos de la cuenta
-     * @return cuenta devuelve los datos de la cuenta, que son: 
-     * String nombre;
-       String cuenta;
-       double saldo;
-       double tipoInterés;
+     * Metodo que pide el número de cuenta del usuario
+     * @return cuenta número de cuenta del usuario
      */
     public String obtenerCuenta()
     {
